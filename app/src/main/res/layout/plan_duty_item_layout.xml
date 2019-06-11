@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="660dp"
+        android:layout_height="388dp"
+        android:background="@mipmap/dtc_pop_bg"
+        android:orientation="vertical">
+
+        <!--勤务类型-->
+        <TextView
+            android:id="@+id/duty_type_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="勤务上哨"
+            android:textColor="#ffe034"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--应该上哨人员信息-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="上哨人员信息:"
+                    android:textColor="#31e1f8"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/gosentry_name_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="哨兵名称:王二狗"
+                    android:textColor="@color/colorText" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="职位:列兵"
+                    android:textColor="@color/colorText" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_margin="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/duty_user_icon" />
+
+
+            </LinearLayout>
+            <!--指纹服务器返回的信息-->
+            <LinearLayout
+                android:id="@+id/comparison_fingerprint_parent_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="指纹服务器反馈信息:"
+                    android:textColor="#31e1f8"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/fingerprint_photo_icon_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/duty_user_icon" />
+
+                <TextView
+                    android:id="@+id/fingerprint_authority_tv_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="离线开锁，远程开启弹箱"
+                    android:textColor="#ffe034"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fingerprint_duty_tv_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="职位:副排长"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fingerprint_name_tv_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="姓名:王鹏飞"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fingerprint_rank_tv_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="军衔:一级士官"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:orientation="horizontal">
+                    <!--人脸视频布局-->
+                    <LinearLayout
+                        android:id="@+id/comparison_face_parent_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center|left"
+                            android:text="人脸认证:"
+                            android:textColor="#31e1f8"
+                            android:textSize="15sp" />
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="visible">
+
+                                <cn.nodemedia.NodePlayerView
+                                    android:id="@+id/planduty_comparison_video_view_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="40dp"
+                                    android:layout_marginTop="20dp"
+                                    android:visibility="invisible"></cn.nodemedia.NodePlayerView>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+                                android:layout_marginBottom="40dp"
+                                android:layout_marginTop="20dp">
+
+                                <ProgressBar
+                                    android:id="@+id/planduty_comparison_video_loading_pr_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:indeterminateDrawable="@drawable/video_loading_view" />
+
+                                <TextView
+                                    android:id="@+id/planduty_comparison_video_loading_tv_layout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/planduty_comparison_video_loading_pr_layout"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="正在加载..."
+                                    android:textColor="@color/red" />
+
+                            </RelativeLayout>
+                        </FrameLayout>
+
+                    </LinearLayout>
+                    <!--人脸截图-->
+                    <LinearLayout
+                        android:id="@+id/comparison_face_shotpic_parent_layout"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center|left"
+                            android:text="人脸截图:"
+                            android:textColor="#31e1f8"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:padding="10dp"
+                            android:id="@+id/planduty_shotpic_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="20dp"
+                            android:scaleType="fitXY"
+                            android:src="@mipmap/duty_user_icon" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text=""
+                            android:textColor="@color/red" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <Button
+                        android:id="@+id/fingerprint_sure_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/btn_pressed_select_bg"
+                        android:text="确认上哨"
+                        android:textColor="@color/white" />
+
+                    <Button
+                        android:id="@+id/preview_take_photo_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="18dp"
+                        android:layout_toLeftOf="@+id/fingerprint_sure_btn"
+                        android:background="@drawable/btn_pressed_select_bg"
+                        android:text="拍照"
+                        android:textColor="@color/white" />
+
+
+                    <Button
+                        android:id="@+id/fingerprint_dismiss_dialog_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="18dp"
+                        android:layout_toRightOf="@+id/fingerprint_sure_btn"
+                        android:background="@drawable/btn_pressed_select_bg"
+                        android:text="取消上哨"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

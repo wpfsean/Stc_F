@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?><!--上级查勤-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="660dp"
+        android:layout_height="282dp"
+        android:background="@mipmap/dtc_pop_chaqinpingjia_bg"
+        android:orientation="vertical">
+
+        <!--勤务类型-->
+        <TextView
+            android:id="@+id/duty_type_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="上级查勤"
+            android:textColor="#ffe034"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--左半部分-->
+            <LinearLayout
+                android:layout_width="460dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="信息比对:"
+                    android:textColor="#31e1f8"
+                    android:textSize="15sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <cn.nodemedia.NodePlayerView
+                            android:id="@+id/suporior_check_duty_video_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="invisible" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ProgressBar
+                                android:id="@+id/superior_check_duty_pr_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:indeterminateDrawable="@drawable/video_loading_view" />
+
+                            <TextView
+                                android:id="@+id/superior_check_duty_tv_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/superior_check_duty_pr_layout"
+                                android:layout_centerHorizontal="true"
+                                android:text="正在加载..."
+                                android:textColor="@color/red" />
+
+                            <TextView
+                                android:id="@+id/superior_countdown_time_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_margin="4dp"
+                                />
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/superior_check_duty_shotpic_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY" />
+
+                        <RelativeLayout
+                            android:id="@+id/shotpic_fail_parent_layout"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text="截图失败..."
+                                android:textColor="@color/red"
+                                android:textSize="28sp" />
+
+                        </RelativeLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:gravity="left|center"
+                    android:text="人脸认证:"
+                    android:textColor="#31e1f8"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="评价:"
+                        android:textColor="#ffe034" />
+
+
+                    <RadioButton
+                        android:id="@+id/superior_check_evaluation_check_c_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:button="@null"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/planduty_pingjia_c_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="4dp"
+                        android:text="差"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <RadioButton
+                        android:id="@+id/superior_check_evaluation_check_l_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:button="@null"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/planduty_pingjia_l_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="4dp"
+                        android:text="良"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <RadioButton
+                        android:id="@+id/superior_check_evaluation_check_y_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="25dp"
+                        android:button="@null"
+                        android:drawablePadding="4dp"
+                        android:drawableTop="@drawable/planduty_pingjia_h_bg"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="4dp"
+                        android:text="优"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="备注:"
+                    android:textColor="#ffe034" />
+
+                <EditText
+                    android:id="@+id/superior_check_evaluation_content_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:gravity="left"
+                    android:imeOptions="actionDone"
+                    android:hint="这时填写备注信息"
+                    android:padding="4dp"
+                    android:textSize="8sp" />
+
+
+                <Button
+                    android:id="@+id/suporior_check_btn_layout"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/btn_pressed_select_bg"
+                    android:text="查勤"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    android:background="@mipmap/dtc_background"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <!--提示弹箱预览功能-->
+    <TextView
+        android:id="@+id/ammobox_preview_function_desc_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="弹箱预览功能"
+        android:textColor="@color/colorText"
+        android:textSize="32sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!--视频预览父布局-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#c0c0c0"
+                android:visibility="visible">
+
+                <!--弹箱视频ivew-->
+                <cn.nodemedia.NodePlayerView
+                    android:id="@+id/box_video_preview_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></cn.nodemedia.NodePlayerView>
+                <!--加载提示-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--提示弹箱视频源-->
+                    <TextView
+                        android:id="@+id/display_box_item_video_info_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="4dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/red"
+                        android:textSize="10sp"
+                        android:visibility="visible" />
+                    <!--提示弹箱视频预览计时-->
+                    <TextView
+                        android:id="@+id/display_preview_box_time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginRight="4dp"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                    <!--预览视频加载进度提示-->
+                    <ProgressBar
+                        android:id="@+id/box_video_loading_pr_layout"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:indeterminateDrawable="@drawable/video_loading_view"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/box_video_loading_tv_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/box_video_loading_pr_layout"
+                        android:layout_centerHorizontal="true"
+                        android:text="正在加载..."
+                        android:textColor="@color/red"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+                <!--倒计时提示-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/authentication_avator_time_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="6dp" />
+                </RelativeLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--右侧功能区域-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#c0c0c0"
+            android:orientation="vertical">
+
+            <!--提示人脸认证-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="头像认证"
+                android:textColor="@color/red"
+                android:textSize="28sp" />
+
+            <!--视频谁或截图-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <cn.nodemedia.NodePlayerView
+                        android:id="@+id/avator_preview_video_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="2dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/prompt_countdown_shotpic_tv_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="8sp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_margin="4dp"/>
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/authentication_avator_shotpic_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="2dp"
+                    android:src="@mipmap/ic_launcher" />
+            </LinearLayout>
+
+            <!--提示结果-->
+            <TextView
+                android:id="@+id/ammobox_result_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="8sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

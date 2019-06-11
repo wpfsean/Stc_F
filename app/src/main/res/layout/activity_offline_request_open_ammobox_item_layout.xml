@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?><!--离线申请开箱dialog布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="540dp"
+        android:layout_height="378dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/dtc_shenqingma1_bg"
+            android:orientation="vertical"
+            android:padding="35dp">
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="离线开锁申请码"
+                android:textColor="#31e1f8"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="请输入开锁码"
+                        android:textColor="#2ac9e1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/edit_request_open_ammobox_code_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:textColor="#2ac9e1"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="请输入开锁码"
+                        android:textColor="#2ac9e1"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/native_request_open_ammobox_code_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/red"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/request_open_ammobox_result_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:paddingLeft="4dp"
+                        android:textColor="@color/red" />
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TableRow android:layout_marginRight="0dp">
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn1_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="1"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn2_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="2"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn3_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="3"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+
+                    </TableRow>
+
+                    <TableRow android:layout_margin="0dp">
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn4_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="4"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn5_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="5"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn6_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="6"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn7_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="7"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn8_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="8"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn9_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="9"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_back_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:gravity="center"
+                            android:text="退格"
+                            android:textColor="#2ac9e1"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_btn0_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:text="0"
+                            android:textColor="#2ac9e1"
+                            android:textSize="30dp" />
+
+                        <Button
+                            android:id="@+id/request_open_ammobox_sure_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/check_offline_open_ammobox_btn_bg"
+                            android:includeFontPadding="false"
+                            android:lineSpacingExtra="1dp"
+                            android:text="确认         生成"
+                            android:textColor="#2ac9e1"
+                            android:textSize="15sp" />
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/count_down_time_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="6dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
