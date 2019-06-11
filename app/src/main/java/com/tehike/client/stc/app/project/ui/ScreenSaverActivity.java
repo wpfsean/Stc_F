@@ -57,7 +57,7 @@ public class ScreenSaverActivity extends BaseActivity {
 
     @Override
     protected int intiLayout() {
-        return R.layout.activity_dtc_screen;
+        return R.layout.activity_dtc_screen_layout;
     }
 
     @Override

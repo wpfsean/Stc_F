@@ -34,7 +34,7 @@ public abstract class BaseFragment extends Fragment  {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.base_fragment, container, false);
+        mView = inflater.inflate(R.layout.base_fragment_layout, container, false);
 
         //点击空白处使键盘消失
         mView.setOnTouchListener(new View.OnTouchListener() {

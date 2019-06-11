@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.text.TextUtils;
 import android.util.Base64;
@@ -1120,7 +1119,7 @@ public class IntercomCallFragment extends BaseFragment {
             ViewHolder viewHolder = null;
             if (convertView == null) {
                 viewHolder = new ViewHolder();
-                convertView = layoutInflater.inflate(R.layout.activity_sipstatus_item, null);
+                convertView = layoutInflater.inflate(R.layout.activity_sip_status_item, null);
                 viewHolder.itemName = (TextView) convertView.findViewById(R.id.item_name);
                 viewHolder.mRelativeLayout = (FrameLayout) convertView.findViewById(R.id.frameLayout_item_layout);
                 viewHolder.mainLayout = convertView.findViewById(R.id.sipstatus_main_layout);
@@ -2022,7 +2021,7 @@ public class IntercomCallFragment extends BaseFragment {
      */
     private void showSpeakingDialog() {
         //加载dialog布局
-        View view = View.inflate(getActivity(), R.layout.activity_speaking_prompt_dialog, null);
+        View view = View.inflate(getActivity(), R.layout.activity_speaking_prompt_dialog_item, null);
         speaking_time = view.findViewById(R.id.speaking_time_layout);
         //正在向谁喊话（布局）
         TextView speaking_name = view.findViewById(R.id.speaking_name_layout);
